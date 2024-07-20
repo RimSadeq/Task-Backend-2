@@ -1,7 +1,7 @@
 
 const request = require("request")
 
- const url = "https://api.weatherapi.com/v1/current.json?key=7f97e74ef23b418c97a155211230503&q=yemen"
+ const url = "http://api.weatherapi.com/v1/current.json?key=5224617def6d40f29c9140617242007&q=yemen"
 
   request ({url} , (error , response) => {
     //   console.log(response.body)
@@ -17,7 +17,7 @@ const request = require("request")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const url1 = "https://api.weatherapi.com/v1/current.json?key=7f97e74ef23b418c97a155211230503&q=yemen"
+const url1 = "http://api.weatherapi.com/v1/current.json?key=5224617def6d40f29c9140617242007&q=yemen"
 
 request ({url1 , json : true  } , (error , response) => {
 
@@ -28,29 +28,12 @@ request ({url1 , json : true  } , (error , response) => {
 
 
 
- ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
- const url2 = "http://api.weatherstack.com/current?access_key=aaf8d75230687617eaa10d75e38c7550&query=yemen"
-
-request ({url2 , json : true  } , (error , response) => {
-
-    // console.log(response.body.location.name)
-    // console.log(response.body.current.weather_descriptions[0])
-
-    if (error) {
-        console.log("ERROR HAS OCCURED")
-    } else if (response.body.error){
-        console.log(response.body.error.message)
-    }else {
-        console.log(response.body.location.name ,response.body.current.weather_descriptions[0] )
-    }
-
-})
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const url3 = "https://api.weatherapi.com/v1/current.json?key=7f97e74ef23b418c97a155211230503&q=yemen"
+const url2 = "https://api.weatherapi.com/v1/current.json?key=5224617def6d40f29c9140617242007&q=yemen"
 
-request ({url3 , json : true  } , (error , response) => {
+request ({url2 , json : true  } , (error , response) => {
 
     if (error) {
         console.log("ERROR HAS OCCURED")
@@ -69,7 +52,7 @@ request ({url3 , json : true  } , (error , response) => {
 
   const geocodeUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/egypt.json?access_token=pk.yJ1IjoiaXNsYW0yODQiLCJhIjoiY2wwamEzNmFhMGFtNTNkb3pqaXk4bXNnYSJ9.qYlrWIqo41gXgNNc4h8yIw"
 
-  request ({url3 : geocodeUrl , json : true} , (error , response) => {
+  request ({url2 : geocodeUrl , json : true} , (error , response) => {
      
     if (error){
         console.log("unable to connect geocode service")
