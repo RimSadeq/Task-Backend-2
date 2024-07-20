@@ -50,7 +50,7 @@ request ({url2 , json : true  } , (error , response) => {
 
  
 
-  const geocodeUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/egypt.json?access_token=pk.yJ1IjoiaXNsYW0yODQiLCJhIjoiY2wwamEzNmFhMGFtNTNkb3pqaXk4bXNnYSJ9.qYlrWIqo41gXgNNc4h8yIw"
+  const geocodeUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/yemen.json?access_token=pk.eyJ1IjoiaXNsYW0yODQiLCJhIjoiY2wwamEzNmFhMGFtNTNkb3pqaXk4bXNnYSJ9.qYlrWIqo41gXgNNc4h8yIw"
 
   request ({url2 : geocodeUrl , json : true} , (error , response) => {
      
@@ -72,7 +72,7 @@ request ({url2 , json : true  } , (error , response) => {
 
   const forecast = (latitude , longtitude , callback) => {
 
-const url = "https://api.weatherapi.com/v1/current.json?key=7f97e74ef23b418c97a155211230503&q=" + latitude + "," + longtitude
+const url = "http://api.weatherapi.com/v1/current.json?key=5224617def6d40f29c9140617242007&q=" + latitude + "," + longtitude
 
 request ({url , json : true  } , (error , response) => {
 
